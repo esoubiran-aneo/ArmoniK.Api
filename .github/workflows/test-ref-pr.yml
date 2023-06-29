@@ -1,0 +1,17 @@
+name: Test Ref
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.ref }}
+      - run: echo ${{ github.head_ref }}
+      - run: echo ${{ github.event.pull_request.head.ref }}
+      - run: echo ${{ github.event.pull_request.head.sha }}
+      - run: echo ${{ github.sha }}
