@@ -21,3 +21,5 @@ jobs:
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0
+
+      - run: npx @aneoconsultingfr/generate-next-version --edge
