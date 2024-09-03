@@ -15,7 +15,7 @@ jobs:
     name: Version
     steps:
       - name: Checkout
-        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
@@ -34,7 +34,7 @@ jobs:
           - packages/csharp/ArmoniK.Api.Tests
     steps:
       - name: Checkout
-        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
@@ -74,7 +74,7 @@ jobs:
           - packages/csharp/ArmoniK.Api.Worker/ArmoniK.Api.Worker.csproj
     steps:
       - name: Checkout
-        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
@@ -104,14 +104,14 @@ jobs:
     name: Release Angular Package
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
 
       - run: npm i -g @antfu/ni pnpm
 
-      - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3
+      - uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7 # v3
         with:
           node-version: 18
           cache: pnpm
@@ -142,14 +142,14 @@ jobs:
     name: Release Web Package
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
 
       - run: npm i -g @antfu/ni pnpm
 
-      - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3
+      - uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7 # v3
         with:
           node-version: 18
           cache: pnpm
@@ -186,7 +186,7 @@ jobs:
       run:
         working-directory: packages/python
     steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
           fetch-depth: 0
 
@@ -194,7 +194,7 @@ jobs:
         run: bash proto2python.sh ~/pyvenv
 
       - name: Upload as artifact
-        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3
+        uses: actions/upload-artifact@ff15f0306b3f739f7b6fd43fb5d26cd321bd4de5 # v3
         with:
           name: python-packages
           path: packages/python/pkg/
