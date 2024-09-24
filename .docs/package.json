@@ -2,7 +2,7 @@
   "name": "armonik-api-docs",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@8.6.5",
+  "packageManager": "pnpm@8.15.9",
   "scripts": {
     "prepare": "nuxi prepare",
     "dev": "nuxi dev",
@@ -15,13 +15,13 @@
     "lint:md:fix": "markdownlint . --fix && case-police --fix ./**/*.md"
   },
   "dependencies": {
-    "@aneoconsultingfr/armonik-docs-theme": "^0.6.12",
-    "nuxt": "^3.6.1"
+    "@aneoconsultingfr/armonik-docs-theme": "^0.6.13",
+    "nuxt": "^3.13.2"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "case-police": "^0.6.1",
-    "eslint": "^8.43.0",
-    "markdownlint-cli": "^0.35.0"
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "case-police": "^0.7.0",
+    "eslint": "^8.57.1",
+    "markdownlint-cli": "^0.42.0"
   }
 }
